@@ -42,5 +42,5 @@ ENV LEPTOS_RELOAD_PORT="3001"
 
 EXPOSE 3000
 
-CMD ["/app/teachers_aide"]
+CMD ["/app/aidezilla"]
 
