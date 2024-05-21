@@ -11,7 +11,7 @@ pub fn App() -> impl IntoView {
 
         <Html lang="en" attr:data-theme="dark" />
         <Title text="Aidezilla"/>
-        <Meta name="description" content="AI (high)powered Teacher's Aide" />
+        <Meta name="description" content="Your AI powered Teacher's Aide" />
         <Stylesheet id="leptos" href="/pkg/aidezilla.css"/>
 
 
@@ -39,11 +39,18 @@ fn LandingPage() -> impl IntoView {
     let decrement = move |_| set_count.update(|count| *count -= 1);
 
     view! {
-        <div class="m-4">
-            <h1 class="font-extrabold text-3xl mb-4">"Meet Aidezilla!"</h1>
-            <h2 class="font-extrabold mb-4">"High Five Counter: " {count}</h2>
-            <button class="btn btn-primary btn-sm mr-4" on:click=increment>"Up high!"</button>
-            <button class="btn btn-primary btn-sm" on:click=decrement>"Down low!"</button>
-        </div>
+            <div class="m-4">
+                <h1 class="font-extrabold text-3xl mb-4">
+                    "Meet "
+                    <strong><em>"Ai"</em></strong>
+                    "dezilla!"
+                </h1>
+                <h2 class="font-extrabold mb-4">
+                    "High Five Counter: "
+                    {count}
+                </h2>
+                <button class="btn btn-primary btn-sm mr-4" on:click=increment>"Up high!"</button>
+                <button class="btn btn-primary btn-sm" on:click=decrement>"Down low!"</button>
+            </div>
     }
 }
